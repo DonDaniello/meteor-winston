@@ -9,4 +9,8 @@ Npm.depends({
 
 Package.on_use(function (api, where) {
   api.add_files('winston.js', 'server');
+  if (api.export) {
+        api.export("Winston", "server");
+        api.export("WinstonMongoDB", "server");
+  }
 });
